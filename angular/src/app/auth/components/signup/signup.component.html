@@ -3,6 +3,7 @@
         <h1 class="title"> Sign Up </h1>
         <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()" novalidate class="signup__container__form">
             <mat-form-field>
+                <mat-label>Firstname</mat-label>
                 <input matInput placeholder="Firstname" formControlName="firstname">
                 <mat-error
                     *ngIf="signUpForm.get('firstname')?.invalid && (signUpForm.get('firstname')?.dirty || signUpForm.get('firstname')?.touched) && signUpForm.get('firstname')?.errors?.required">
@@ -10,13 +11,15 @@
                 </mat-error>
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="LastName" formControlName="lastname">
+                <mat-label>Lastname</mat-label>
+                <input matInput placeholder="Lastname" formControlName="lastname">
                 <mat-error
                     *ngIf="signUpForm.get('lastname')?.invalid && (signUpForm.get('lastname')?.dirty || signUpForm.get('lastname')?.touched) && signUpForm.get('lastname')?.errors?.required">
                     Lastname is required
                 </mat-error>
             </mat-form-field>
             <mat-form-field>
+                <mat-label>Email</mat-label>
                 <input matInput placeholder="Email" formControlName="email">
                 <mat-error
                     *ngIf="!signUpForm.get('email')?.errors?.required && (signUpForm.get('email')?.errors?.pattern)">
@@ -28,6 +31,7 @@
                 </mat-error>
             </mat-form-field>
             <mat-form-field>
+                <mat-label>Password</mat-label>
                 <input matInput type="password" placeholder="Password" formControlName="password">
                 <mat-error *ngIf="!signUpForm.get('password')?.errors?.required">
                     Password length must be greater than or equal to 8 and password must contain one or more uppercase ,
@@ -40,6 +44,7 @@
                 </mat-error>
             </mat-form-field>
             <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
                 <input matInput type="text" placeholder="Confirm Password" formControlName="password2">
                 <mat-error
                     *ngIf="signUpForm.get('password2')?.invalid && (signUpForm.get('password2')?.dirty || signUpForm.get('password2')?.touched) && signUpForm.get('password2')?.errors?.required">
