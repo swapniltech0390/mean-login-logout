@@ -1,0 +1,17 @@
+.container {
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    .mat-button {
+        background-color: transparent;
+
+        &:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        &.active-link {
+            border-bottom: 2px solid #fff;
+        }
+    }
+}

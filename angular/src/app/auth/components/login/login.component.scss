@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    height: 100%;
+
+    .login {
+        &__container {
+            max-width: 50%;
+            min-width: 30%;
+            margin: auto;
+            padding: 40px;
+            box-shadow: 0 0 5px 0px #000;
+            border-radius: 10px;
+
+            .title {
+                text-align: center;
+            }
+
+            &__form {
+                display: flex;
+                flex-direction: column;
+
+                mat-form-field {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}

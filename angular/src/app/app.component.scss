@@ -1,0 +1,14 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    .router {
+        flex-grow: 1;
+    }
+}
