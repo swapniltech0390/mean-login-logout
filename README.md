@@ -1,4 +1,4 @@
-Skeleton Project for MEAN Stack
+#Skeleton Project for MEAN Stack
 
 Ready to go with advance features of MEAN
 1) Angular 15
@@ -8,34 +8,32 @@ Ready to go with advance features of MEAN
 5) Ngrx Store
 6) Authentication with Cookies
 
-Pre-requisite for setup
+**Pre-requisite for setup**
 1) MongoDB
 2) NodeJS
 3) Angular CLI
 
-Stage 1 : Start MongoDB local
+**Stage 1 : Start MongoDB local**
 1) Connect to localhost database
     mongodb://localhost:27017/
 
 2) Create database -- shopping_cart
 
-Stage 2 : Start Backend
+**Stage 2 : Start Backend**
 1) Open Server folder and run commands
 2)   npm install
 3)   npm start
   
   Expected Output
-    [nodemon] 2.0.20
-    [nodemon] to restart at any time, enter `rs`
-    [nodemon] watching path(s): *.*
-    [nodemon] watching extensions: js,mjs,json
-    [nodemon] starting `node index.js`
-    (node:2636) [MONGOOSE] DeprecationWarning: Mongoose: the `strictQuery` option will be switched back to `false` by default in Mongoose 7. Use `mongoose.set('strictQuery', false);` if you want to prepare for this change. Or use `mongoose.set('strictQuery', true);` to suppress this warning.
-    (Use `node --trace-deprecation ...` to show where the warning was created)
-    Listening at 3000
-    database is connected successfully
+        [nodemon] 2.0.20
+        [nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node index.js`
+(node:2636) [MONGOOSE] DeprecationWarning: Mongoose: the `strictQuery` option will be switched back to `false` by default in Mongoose 7. Use `mongoose.set('strictQuery', false);` if you want to prepare for this change. Or use `mongoose.set('strictQuery', true);` to suppress this warning.
+(Use `node --trace-deprecation ...` to show where the warning was created)Listening at 3000database is connected successfully
 
-Stage 3: Start Angular
+**Stage 3: Start Angular**
 1) Open angular folder and run commands
 2)   npm install
 3)   ng add @angular/material
