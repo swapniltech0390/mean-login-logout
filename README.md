@@ -1,6 +1,6 @@
-Is is a Skeleton Project for MEAN Stack
+Skeleton Project for MEAN Stack
 
-Ready to go skeleton with advance features of MEAN
+Ready to go with advance features of MEAN
 1) Angular 15
 2) Express
 3) MongoDB
