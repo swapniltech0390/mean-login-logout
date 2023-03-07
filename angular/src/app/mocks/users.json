@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "firstname": "John",
+            "lastname": "Smith",
+            "email": "john@test.com",
+            "password": "Test123@",
+            "password2": "Test123@"
+        },
+        {
+            "id": "2",
+            "firstname": "Jacob",
+            "lastname": "Smith",
+            "email": "jacob@test.com",
+            "password": "Test123@",
+            "password2": "Test123@"
+        },
+        {
+            "id": "3",
+            "firstname": "James",
+            "lastname": "Anderson",
+            "email": "james@test.com",
+            "password": "Test123@",
+            "password2": "Test123@"
+        }
+    ]
+}

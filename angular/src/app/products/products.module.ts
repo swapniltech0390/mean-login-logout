@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
-import * as fromProducts from './reducers';
+import * as fromProducts from './store/products.reducer';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsRoutingModule } from './products-routing.module';
+import { EffectsModule } from '@ngrx/effects';
+import { ProductEffects } from './store';
+import { ProductsService } from './service/products.service';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -12,10 +16,12 @@ import { ProductsRoutingModule } from './products-routing.module';
     CommonModule,
     ProductsRoutingModule,
     StoreModule.forFeature(
-      fromProducts.productsFeatureKey,
-      fromProducts.reducers,
-      { metaReducers: fromProducts.metaReducers }
+      fromProducts.productFeatureKey,
+      fromProducts.productReducer
     ),
+    EffectsModule.forFeature([ProductEffects]),
+    MatTableModule,
   ],
+  providers: [ProductsService],
 })
 export class ProductsModule {}
