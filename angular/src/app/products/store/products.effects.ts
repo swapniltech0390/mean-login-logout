@@ -12,8 +12,8 @@ export class ProductEffects {
         this.productService
           .getProducts()
           .pipe(
-            map((resp: any) =>
-              ProductActions.product_success({ product: resp })
+            map((product: any) =>
+              ProductActions.product_success({ product })
             )
           )
       )

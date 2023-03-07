@@ -1,26 +1,10 @@
-import { User } from '../auth/models/user.model';
-import {
-  ShoppingBasketActionsType,
-} from './app.actions';
+import { ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { environment } from '../../environments/environment';
 
-export interface ShoppingBasketState {
-  userDetails: User;
-}
+export interface AppState {}
 
-export const ShoppingBasketInitialState = {
-  userDetails: {
-    name: '',
-    email: '',
-  },
-};
+export const reducers: ActionReducerMap<AppState> = {};
 
-export function ShoppingBasketReducer(
-  state: ShoppingBasketState = ShoppingBasketInitialState,
-  action: ShoppingBasketActionsType
-): ShoppingBasketState {
-  switch (action.type) {
-    default: {
-     return state;
-    }
-  }
-}
+export const metaReducers: MetaReducer<AppState>[] = !environment.production
+  ? []
+  : [];

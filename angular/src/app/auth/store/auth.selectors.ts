@@ -7,10 +7,11 @@ export const isLoggedIn = createSelector(
   selectAuthState,
   (state) => state?.isAuth
 );
+
+export const isLoggedOut = createSelector(isLoggedIn, (loggedIn) => !loggedIn);
 export const isLoggedError = createSelector(
   selectAuthState,
   (state) => state?.error
 );
 
 export const user = createSelector(selectAuthState, (state) => state.user);
-export const isLoggedOut = createSelector(isLoggedIn, (loggedIn) => !loggedIn);

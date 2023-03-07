@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
-import * as fromProducts from './store/products.reducer';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsRoutingModule } from './products-routing.module';
 import { EffectsModule } from '@ngrx/effects';
-import { ProductEffects } from './store';
+import { ProductEffects, productFeatureKey, productReducer } from './store';
 import { ProductsService } from './service/products.service';
 import { MatTableModule } from '@angular/material/table';
 
@@ -16,8 +15,8 @@ import { MatTableModule } from '@angular/material/table';
     CommonModule,
     ProductsRoutingModule,
     StoreModule.forFeature(
-      fromProducts.productFeatureKey,
-      fromProducts.productReducer
+      productFeatureKey,
+      productReducer
     ),
     EffectsModule.forFeature([ProductEffects]),
     MatTableModule,

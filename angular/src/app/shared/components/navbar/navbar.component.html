@@ -3,8 +3,10 @@
         <span>S-Basket</span>
         <span class="spacer"></span>
         <button mat-button routerLink="home" routerLinkActive="active-link" *ngIf="isLoggedIn$ | async">Home</button>
-        <button mat-button routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" *ngIf="isLoggedOut$ | async">Login</button>
-        <button mat-button routerLink="signup" routerLinkActive="active-link" *ngIf="isLoggedOut$ | async">SignUp</button>
+        <button mat-button routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+            *ngIf="isLoggedOut$ | async">Login</button>
+        <button mat-button routerLink="signup" routerLinkActive="active-link"
+            *ngIf="isLoggedOut$ | async">SignUp</button>
         <button mat-button *ngIf="isLoggedIn$ | async" (click)="logout()">LogOut</button>
     </mat-toolbar-row>
 </mat-toolbar>

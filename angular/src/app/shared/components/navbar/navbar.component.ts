@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
-import { AuthActions, AuthState, isLoggedIn, isLoggedOut } from '../../../auth/store';
+import {
+  AuthActions,
+  AuthState,
+  isLoggedIn,
+  isLoggedOut,
+} from '../../../auth/store';
 
 @Component({
   selector: 'app-navbar',
@@ -12,9 +17,7 @@ export class NavbarComponent implements OnInit {
   isLoggedIn$: Observable<boolean> = of(false);
   isLoggedOut$: Observable<boolean> = of(true);
 
-  constructor(
-    private store: Store<AuthState>
-  ) {}
+  constructor(private store: Store<AuthState>) {}
 
   ngOnInit(): void {
     this.isLoggedIn$ = this.store.pipe(select(isLoggedIn));

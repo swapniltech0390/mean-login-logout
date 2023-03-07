@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { MustMatch } from '../../validators/CustomValidators';
-import { AppState } from 'src/app/reducers';
-import { AuthActions } from '../../store';
+import { AuthActions, AuthState } from '../../store';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -11,10 +10,7 @@ import { AuthActions } from '../../store';
 })
 export class SignupComponent implements OnInit {
   signUpForm: FormGroup | any;
-  constructor(
-    private fb: FormBuilder,
-    private store: Store<AppState>
-  ) {}
+  constructor(private fb: FormBuilder, private store: Store<AuthState>) {}
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group(

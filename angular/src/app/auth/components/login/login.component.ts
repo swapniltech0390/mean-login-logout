@@ -2,9 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable,throwError } from 'rxjs';
-import { AppState } from 'src/app/reducers';
 import { AuthActions } from '../../store/auth.actions';
-import { isLoggedError} from '../../store';
+import { AuthState, isLoggedError} from '../../store';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,7 +16,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('form') form:any;
 
   constructor(
-    private store: Store<AppState>
+    private store: Store<AuthState>
   ) {
     this.loginForm = new FormGroup({
       email: new FormControl('', [
